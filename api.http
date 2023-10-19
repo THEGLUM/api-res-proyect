@@ -1,0 +1,33 @@
+### hacemos la peticion para las movies
+GET http://localhost:3000/movies
+
+
+### hacmoes la peticion ahora con el id para devolver una pelicula
+GET http://localhost:3000/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+
+### vamos a filtrar por genero
+
+GET http://localhost:3000/movies?genre=action
+
+	### vamos a crear un pelicula
+POST http://localhost:3000/movies
+Content-Type: application/json
+
+{
+	"title": "los simpson",
+	"year": 1985,
+	"director": "Christopher Nolan",
+	"duration": 143,
+	"poster": "https://i.ebayimg.com/images/g/yokAAOSw8w1YARbm/s-l1200.jpg",
+	"genre": ["Comedy"],
+	"rate": 9
+}
+
+### Actualizar una pelicula
+PATCH http://localhost:3000/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+Content-Type: application/json
+
+{
+	"title": "santiago",
+	"year" : 2003
+}
